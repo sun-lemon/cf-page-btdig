@@ -1,8 +1,5 @@
 export default {
     async fetch(request, env) {
-      if (!doBasicAuth(request)) {
-         return unauthorized();
-      }
       let url = new URL(request.url);
       if (url.pathname.startsWith('/')) {
         url.hostname="btdig.com";
